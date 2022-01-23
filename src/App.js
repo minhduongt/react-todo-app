@@ -17,13 +17,13 @@ function App() {
 
   const [name, setName] = useState('');
 
-  function changeUserName(e) {
-    setName({ name: e.target.value });
-  }
+  // function changeUserName(e) {
+  //   setName({ name: e.target.value });
+  // }
 
-  function displayChangeName() {
-    document.getElementById('nameTextField').style.display = "block"
-  }
+  // function displayChangeName() {
+  //   document.getElementById('nameTextField').style.display = "block"
+  // }
 
 
 
@@ -36,7 +36,7 @@ function App() {
             <h3>
               Welcome, {name}
               <Button
-                onClick={displayChangeName}
+
                 style={{
                   float: 'right'
                 }}
