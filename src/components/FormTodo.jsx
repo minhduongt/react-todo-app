@@ -4,6 +4,7 @@ import { FormGroup } from '@mui/material';
 import { TextField } from '@mui/material';
 import { Button } from '@mui/material';
 import { useState, useCallback, useEffect } from 'react';
+import AddBoxIcon from '@mui/icons-material/AddBox';
 
 
 export default function FormTodo() {
@@ -61,7 +62,7 @@ export default function FormTodo() {
                     fullWidth
                     id="fullWidth"
                     size="small"
-                    placeholder='Add a work please...'
+                    placeholder='Add something...'
                     value={textInput}
                     onChange={(event) => setTextInput(event.target.value)}
                 />
@@ -71,6 +72,7 @@ export default function FormTodo() {
                     disabled={!textInput}
                 >
                     Add
+                    <AddBoxIcon></AddBoxIcon>
                 </Button>
             </FormGroup>
             <TodoList todoList={todoList} removeTodo={removeTodo} toggleComplete={toggleComplete} />

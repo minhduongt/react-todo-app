@@ -2,7 +2,6 @@ import React from 'react';
 import { Checkbox, Container, IconButton } from '@mui/material';
 import DeleteIcon from '@mui/icons-material/Delete';
 import { styled } from '@mui/system';
-
 const IconButtonStyled = styled(IconButton)(
     {
         float: 'right',
