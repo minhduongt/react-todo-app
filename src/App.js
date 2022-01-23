@@ -1,10 +1,11 @@
 import './App.css';
+import { useState } from 'react';
 import CssBaseline from '@mui/material/CssBaseline';
 import Box from '@mui/material/Box';
 import Container from '@mui/material/Container';
-import { fontSize, styled } from '@mui/system';
+import { Button, TextField } from '@mui/material';
+import { styled } from '@mui/system';
 import FormTodo from './components/FormTodo';
-import FormTodoList from './components/FormTodoList';
 
 const HeaderStyled = styled('header')(
   {
@@ -15,18 +16,51 @@ const HeaderStyled = styled('header')(
 
 function App() {
 
+  const [name, setName] = useState('');
+
+  function changeUserName(e) {
+    setName({ name: e.target.value });
+  }
+
+  function displayChangeName() {
+    document.getElementById('nameTextField').style.display = "block"
+  }
+
+
+
   return (
     <>
-      <CssBaseline />
+
       <Container maxWidth="sm">
         <Box sx={{ bgcolor: 'lightgrey', height: '100vh' }}>
           <div>
-            <h3>Welcome, Guest</h3>
+            <h3>
+              Welcome, {name}
+              <Button
+                onClick={displayChangeName}
+                style={{
+                  float: 'right'
+                }}
+              >Change Name
+              </Button>
+              <TextField
+                id='nameTextField'
+                size='small'
+                placeholder='Enter your name'
+                style={{
+                  float: 'right',
+                  display: 'none'
+
+                }}
+              >
+              </TextField>
+            </h3>
+
+            <br></br>
             <HeaderStyled>
               Todo List
             </HeaderStyled>
             <FormTodo />
-            <FormTodoList />
           </div>
         </Box>
       </Container>
