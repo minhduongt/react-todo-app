@@ -1,5 +1,5 @@
 import './App.css';
-import { useState } from 'react';
+//import { useState } from 'react';
 import Box from '@mui/material/Box';
 import Container from '@mui/material/Container';
 import { Button, TextField } from '@mui/material';
@@ -15,7 +15,7 @@ const HeaderStyled = styled('header')(
 
 function App() {
 
-  const [name, setName] = useState('');
+  //const [name, setName] = useState('');
 
   // function changeUserName(e) {
   //   setName({ name: e.target.value });
@@ -34,7 +34,7 @@ function App() {
         <Box sx={{ bgcolor: 'lightgrey', height: '100vh' }}>
           <div>
             <h3>
-              Welcome, {name}
+              Welcome, Guest
               <Button
 
                 style={{
