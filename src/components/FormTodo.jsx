@@ -61,7 +61,7 @@ export default function FormTodo() {
                     fullWidth
                     id="fullWidth"
                     size="small"
-                    placeholder='Add somthing...'
+                    placeholder='Add something...'
                     value={textInput}
                     onChange={(event) => setTextInput(event.target.value)}
                 />
